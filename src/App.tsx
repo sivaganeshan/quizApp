@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import { walkUpBindingElementsAndPatterns } from 'typescript';
 import QuestionCard from './components/QuestionCard';
 import {fetchQuizQuestions, Difficulty, QuesyionState} from './API';
 import {GlobalStyle,Wrapper} from './App.style';
@@ -41,7 +40,7 @@ setNumber(0);
 const checkAnswer = (e:React.MouseEvent<HTMLButtonElement>)=>{
  if(!gameOver){
   const answer = e.currentTarget.value;
-  const correct = answer == questions[number].correct_answer;
+  const correct = answer === questions[number].correct_answer;
   if(correct) setScore(prev=> prev+1);
   const answerObject:AnswerObject={
     question:questions[number].question,
