@@ -104,7 +104,7 @@ const selectDifficulty =(e: React.FocusEvent<HTMLSelectElement>)=>{
      {gameOver || userAnswers.length === TOTAL_QUESTIONS?(
        <div>
       <label htmlFor="categories">Choose a category : </label>
-     <select name="categories" id="categories" value={difficulty} onChange={selectCategory} >
+     <select name="categories" id="categories" value={category} onChange={selectCategory} >
      <option value="9">General Knowledge</option>
      <option value="21">sports</option>
      <option value="17">Science</option>
